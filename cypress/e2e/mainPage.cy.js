@@ -108,10 +108,7 @@ describe('Main page testing', () => {
     });
 
     it("Add to basket multiple items", () => {
-      cy.get('a[data-name="Sherbert Straws"]').click();
-      cy.get('a[data-name="Chocolate Cups"]').click();
-      cy.get('a[data-name="Sherbet Discs"]').click();
-      cy.get('a[data-name="Strawberry Bon Bons"]').click();
+      cy.addMultipleItems();
 
       cy.contains('a span', '4').should('be.visible');
       cy.contains('a', 'Basket').click();

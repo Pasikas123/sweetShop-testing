@@ -376,7 +376,7 @@ STATUS: FAIL.
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
 * 4. Press login button
-* 5. Observe Your Account page
+* 5. Observe Your Account header
 
 Expected result: Your Account header should be visible.
 
@@ -389,7 +389,161 @@ STATUS: PASS.
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
 * 4. Press login button
-* 5. Observe Your Account page
+* 5. Observe Your Account description
+
+Expected result: Description should contain: Welcome back.
+
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.1.3 Previous orders header is visible
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press login button
+* 5. Observe Previous order header
+
+Expected result: Previous orders header should be visible.
+
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.1.4 Previous orders list is visible
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press login button
+* 5. Observe Previous orders list
+
+Expected result: Your previous orders list should be visible.
+
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.1.5 Item Order Breakdown header is visible
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press login button
+* 5. Observe Item Order Breakdown header
+
+Expected result: Your Item Order Breakdown header should be visible.
+
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.1.6 Item Order Breakdown graph is visible
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press login button
+* 5. Observe Item Order Breakdown graph
+
+Expected result: Your Item Order Breakdown graph should be visible.
+
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.1.7 Your Basket header is visible
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press login button
+* 5. Observe Your Basket header
+
+Expected result: Your Basket header should be visible.
+
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.1.8 Your Basket list is visible
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press login button
+* 5. Observe Your Basket list
+
+Expected result: Your Basket list should be visible.
+
+Actual result:
+
+STATUS: PASS.
+
+
+## TC.3.2.1 Navigation 'Sweet shop' brings to 'Welcome' page
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press Sweet Shop attribute in navigation
+* 5. Observe "Welcome" page
+
+Expected result: 'Welcome' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.2.2 Navigation 'Sweets' brings to 'Sweets' page
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press Sweets attribute in navigation
+* 5. Observe "Sweets" page
+
+Expected result: 'Sweets' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.2.3 Navigation 'About' brings to 'About' page
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press About attribute in navigation
+* 5. Observe "About" page
+
+Expected result: 'About' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.2.4 Navigation 'Login' brings to 'Login' page
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press Login attribute in navigation
+* 5. Observe "Login" page
+
+Expected result: 'Login' page opens
+Actual result:
+
+STATUS: PASS.
+
+
+
+## TC.3.2.5 Navigation 'Basket' brings to 'Basket' page
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press Basket attribute in navigation
+* 5. Observe "Basket" page
+
+Expected result: 'Basket' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.3.3.1 Description shows incorrect email
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Type email adress: test@gmail.com
+* 3. Type password: test
+* 4. Press login button
+* 5. Observe description email
 
 Expected result: Description should be: Welcome back test@gmail.com.
 
@@ -397,33 +551,8 @@ Actual result: Description is: Welcome back test@user.com
 
 STATUS: FAIL.
 
-## TC.3.1.3 Previous orders are visible
-* 1. Enter https://sweetshop.netlify.app/login
-* 2. Type email adress: test@gmail.com
-* 3. Type password: test
-* 4. Press login button
-* 5. Observe Your Account page
 
-Expected result: Your previous orders should be visible.
-
-Actual result:
-
-STATUS: PASS.
-
-## TC.3.1.4 Item Order Breakdown is visible
-* 1. Enter https://sweetshop.netlify.app/login
-* 2. Type email adress: test@gmail.com
-* 3. Type password: test
-* 4. Press login button
-* 5. Observe Your Account page
-
-Expected result: Your Item Order Breakdown should be visible.
-
-Actual result:
-
-STATUS: PASS.
-
-## TC.3.2. Description attribute
+## TC.3.3.2 Description attribute doesn't work
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -432,13 +561,14 @@ STATUS: PASS.
 * 5. Press attribute test@user.com
 * 6. Observe page
 
-Expected result: Attribute shouldn't even exist, it should only appear as plain text.
+Expected result: Description attribute will redirect to other page.
 
-Actual result: Attribute exists, when pressing it, nothing happens.
+Actual result: When pressing description attribute, nothing happens.
 
 STATUS: FAIL.
 
-## TC.3.3.1 Sorting by number
+
+## TC.3.4.1 Sorting by order number with single click
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test

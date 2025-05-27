@@ -20,6 +20,19 @@ Cypress.Commands.add('checkMultipleItems', () => {
         .and('contain', '£1.00')
 });
 
+Cypress.Commands.add('addMultipleItems', () => {
+    cy.get('a[data-name="Sherbert Straws"]').click();
+    cy.get('a[data-name="Chocolate Cups"]').click();
+    cy.get('a[data-name="Sherbet Discs"]').click();
+    cy.get('a[data-name="Strawberry Bon Bons"]').click();
+});
+
+Cypress.Commands.add('validLogin', () => {
+    cy.get('#exampleInputEmail').type('test@gmail.com');
+    cy.get('#exampleInputPassword').type('test');
+    cy.contains('button', 'Login').click();
+});
+
 Cypress.Commands.add('invalidEmail', () => {
     cy.contains('.invalid-email', 'Please enter a valid email address').should('be.visible');
 });

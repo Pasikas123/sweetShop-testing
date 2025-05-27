@@ -46,10 +46,7 @@ describe('Login page testing', () => {
     describe('Logging in', () => {
 
         it('Login with valid data', () => {
-            cy.get('#exampleInputEmail').type('test@gmail.com');
-            cy.get('#exampleInputPassword').type('test');
-
-            cy.contains('button', 'Login').click();
+            cy.validLogin();
 
             cy.contains('h1', 'Your Account').should('be.visible');
             cy.contains('p', 'Welcome back').should('be.visible');
