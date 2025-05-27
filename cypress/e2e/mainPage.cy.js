@@ -31,16 +31,8 @@ describe('Main page testing', () => {
     });
 
     it("All list items have necessary HTML elements", () => {
-      cy.get('.card').each($item => {
-        cy.wrap($item).find('img').should('be.visible');
-        cy.wrap($item).find('h4').should('be.visible');
-        cy.wrap($item).find('p').should('be.visible');
-        cy.wrap($item).find('small').should('be.visible');
-        cy.wrap($item).find('small').should('be.visible');
-        cy.wrap($item).find('.addItem').should('be.visible');
-      });
+      cy.checkHtmlElements();
     });
-
 
     it("Page has the footer", () => {
       cy.contains('footer', 'Sweet Shop Project 2018').should('be.visible')
@@ -90,36 +82,12 @@ describe('Main page testing', () => {
     });
 
     it("Add to basket two same items", () => {
-      cy.get('a[data-name="Sherbert Straws"]').dblclick();
-      cy.contains('a span', '2').should('be.visible');
-      cy.contains('a', 'Basket').click();
-
-
-      cy.get('#basketItems')
-        .should('contain', 'Sherbert Straws')
-        .and('contain', 'x 2')
-        .and('contain', '£1.50')
-
-      cy.get('.list-group-item strong').should('contain', '£1.50');
-
-      cy.contains('a', 'Empty Basket').click();
-
-
+      cy.addTwoSameItems();
     });
 
     it("Add to basket multiple items", () => {
       cy.addMultipleItems();
-
-      cy.contains('a span', '4').should('be.visible');
-      cy.contains('a', 'Basket').click();
-
       cy.checkMultipleItems();
-
-      cy.get('.list-group-item strong').should('contain', '£3.70');
-
-      cy.contains('a', 'Empty Basket').click();
-
     });
   });
-
 });

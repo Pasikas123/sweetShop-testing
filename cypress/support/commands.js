@@ -18,6 +18,8 @@ Cypress.Commands.add('checkMultipleItems', () => {
         .should('contain', 'Chocolate Cups')
         .and('contain', 'x 1')
         .and('contain', '£1.00')
+
+    cy.get('.list-group-item strong').should('contain', '£3.70');
 });
 
 Cypress.Commands.add('addMultipleItems', () => {
@@ -25,6 +27,35 @@ Cypress.Commands.add('addMultipleItems', () => {
     cy.get('a[data-name="Chocolate Cups"]').click();
     cy.get('a[data-name="Sherbet Discs"]').click();
     cy.get('a[data-name="Strawberry Bon Bons"]').click();
+
+    cy.contains('a span', '4').should('be.visible');
+    cy.contains('a', 'Basket').click();
+
+});
+
+Cypress.Commands.add('addTwoSameItems', () => {
+    cy.get('a[data-name="Sherbert Straws"]').dblclick();
+    cy.contains('a span', '2').should('be.visible');
+    cy.contains('a', 'Basket').click();
+
+    cy.get('#basketItems')
+        .should('contain', 'Sherbert Straws')
+        .and('contain', 'x 2')
+        .and('contain', '£1.50')
+
+    cy.get('.list-group-item strong').should('contain', '£1.50');
+});
+
+Cypress.Commands.add('checkHtmlElements', () => {
+    cy.get('.card').each($item => {
+        cy.wrap($item).find('img').should(($img) => {
+            expect($img[0].naturalWidth).to.be.greaterThan(0);
+        });
+        cy.wrap($item).find('h4').should('be.visible');
+        cy.wrap($item).find('p').should('be.visible');
+        cy.wrap($item).find('small').should('be.visible');
+        cy.wrap($item).find('.addItem').should('be.visible');
+    });
 });
 
 Cypress.Commands.add('validLogin', () => {
@@ -42,31 +73,31 @@ Cypress.Commands.add('invalidPass', () => {
 
 Cypress.Commands.add('navShop', () => {
     cy.contains('a', 'Sweet Shop').click();
-    cy.url('https://sweetshop.netlify.app/');
+    cy.url().should('eq', 'https://sweetshop.netlify.app/');
     cy.contains('h1', 'Welcome to the sweet shop!').should('be.visible');
 });
 
 Cypress.Commands.add('navSweets', () => {
     cy.contains('a', 'Sweets').click();
-    cy.url('https://sweetshop.netlify.app/sweets');
+    cy.url().should('eq', 'https://sweetshop.netlify.app/sweets');
     cy.contains('h1', 'Browse sweets').should('be.visible');
 });
 
 Cypress.Commands.add('navAbout', () => {
     cy.contains('a', 'About').click();
-    cy.url('https://sweetshop.netlify.app/about');
+    cy.url().should('eq', 'https://sweetshop.netlify.app/about');
     cy.contains('p', 'An intentionally broken web application to help demonstrate Chrome DevTools.').should('be.visible');
 });
 
 Cypress.Commands.add('navLogin', () => {
     cy.contains('a', 'Login').click();
-    cy.url('https://sweetshop.netlify.app/login');
+    cy.url().should('eq', 'https://sweetshop.netlify.app/login');
     cy.contains('h1', 'Login').should('be.visible');
 });
 
 Cypress.Commands.add('navBasket', () => {
     cy.contains('a', 'Basket').click();
-    cy.url('https://sweetshop.netlify.app/basket');
+    cy.url().should('eq', 'https://sweetshop.netlify.app/basket');
     cy.contains('h1', 'Your Basket').should('be.visible');
 });
 

@@ -231,7 +231,7 @@ Actual result:
 STATUS: PASS.
 
 ## TC.2.2.1 Navigation 'Sweet shop' brings to 'Welcome' page
-* 1. Enter https://sweetshop.netlify.app/
+* 1. Enter https://sweetshop.netlify.app/login
 * 2. Press 'Sweet shop' attribute in navigation bar
 * 3. Observe 'Welcome' page
 
@@ -241,7 +241,7 @@ Actual result:
 STATUS: PASS.
 
 ## TC.2.2.2 Navigation 'Sweets' brings to 'Sweets' page
-* 1. Enter https://sweetshop.netlify.app/
+* 1. Enter https://sweetshop.netlify.app/login
 * 2. Press 'Sweets' attribute in navigation bar
 * 3. Observe 'Sweets' page
 
@@ -251,7 +251,7 @@ Actual result:
 STATUS: PASS.
 
 ## TC.2.2.3 Navigation 'About' brings to 'About' page
-* 1. Enter https://sweetshop.netlify.app/
+* 1. Enter https://sweetshop.netlify.app/login
 * 2. Press 'About' attribute in navigation bar
 * 3. Observe 'About' page
 
@@ -261,7 +261,7 @@ Actual result:
 STATUS: PASS.
 
 ## TC.2.2.4 Navigation 'Basket' brings to 'Basket' page
-* 1. Enter https://sweetshop.netlify.app/
+* 1. Enter https://sweetshop.netlify.app/login
 * 2. Press 'Basket' attribute in navigation bar
 * 3. Observe 'Basket' page
 
@@ -694,50 +694,7 @@ Actual result:
 
 STATUS: PASS.
 
-
-## TC.3.4.1 Item Order Breakdown by February
-* 1. Enter https://sweetshop.netlify.app/login
-* 2. Type email adress: test@gmail.com
-* 3. Type password: test
-* 4. Press login button
-* 5. Hover on Item Order Breakdown February graph
-* 6. Observe hover pop up and previous orders
-
-Expected result: Hover pop up and previous orders of items ordered should match.
-
-Actual result:
-
-STATUS: PASS.
-
-## TC.3.4.2 Item Order Breakdown by July
-* 1. Enter https://sweetshop.netlify.app/login
-* 2. Type email adress: test@gmail.com
-* 3. Type password: test
-* 4. Press login button
-* 5. Hover on Item Order Breakdown July graph
-* 6. Observe hover pop up and previous orders
-
-Expected result: Hover pop up and previous orders of items ordered should match.
-
-Actual result:
-
-STATUS: PASS.
-
-## TC.3.4.3 Item Order Breakdown by December
-* 1. Enter https://sweetshop.netlify.app/login
-* 2. Type email adress: test@gmail.com
-* 3. Type password: test
-* 4. Press login button
-* 5. Hover on Item Order Breakdown December graph
-* 6. Observe hover pop up and previous orders
-
-Expected result: Hover pop up and previous orders of items ordered should match.
-
-Actual result:
-
-STATUS: PASS.
-
-## TC.3.5.1 Your basket functionality in Your Account page
+## TC.3.4.1 Your basket shows added items
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Add to basket: Chocolate Cups, Bon Bons, Sherbert Straws, Sherbert Discs.
 * 3. Enter https://sweetshop.netlify.app/login
@@ -752,7 +709,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.3.5.2 Your basket deleting in Your Account page
+## TC.3.4.2 Deleting items in Your Basket
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Add to basket: Chocolate Cups, Bon Bons, Sherbert Straws, Sherbert Discs.
 * 3. Enter https://sweetshop.netlify.app/login
@@ -797,6 +754,48 @@ Expected result: All list items have images, headers, descriptions and prices
 Actual result: "Wham Bars" doesn't have it's image
 
 STATUS: FAIL.
+
+
+## TC.4.4.1 Navigation 'Sweet shop' brings to 'Welcome' page
+* 1. Enter https://sweetshop.netlify.app/sweets
+* 2. Press 'Sweet shop' attribute in navigation bar
+* 3. Observe 'Welcome' page
+
+Expected result: 'Welcome' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.4.4.2 Navigation 'About' brings to 'About' page
+* 1. Enter https://sweetshop.netlify.app/sweets
+* 2. Press 'About' attribute in navigation bar
+* 3. Observe 'About' page
+
+Expected result: 'About' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.4.4.3 Navigation 'Login' brings to 'Login' page
+* 1. Enter https://sweetshop.netlify.app/sweets
+* 2. Press 'Login' attribute in navigation bar
+* 3. Observe 'Login' page
+
+Expected result: 'Login' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.4.4.4 Navigation 'Basket' brings to 'Basket' page
+* 1. Enter https://sweetshop.netlify.app/sweets
+* 2. Press 'Basket' attribute in navigation bar
+* 3. Observe 'Basket' page
+
+Expected result: 'Basket' page opens
+Actual result:
+
+STATUS: PASS.
+
 
 ## TC.4.4.1 Add to basket Wham Bars
 * 1. Enter https://sweetshop.netlify.app/sweets
