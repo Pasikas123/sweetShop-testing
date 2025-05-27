@@ -797,7 +797,7 @@ Actual result:
 STATUS: PASS.
 
 
-## TC.4.4.1 Add to basket Wham Bars
+## TC.4.5.1 Add to basket single item (Wham Bars)
 * 1. Enter https://sweetshop.netlify.app/sweets
 * 2. Press Add to basket: Wham Bars.
 * 3. Observe navigation bar's Basket count
@@ -819,7 +819,7 @@ Actual result:
 STATUS: PASS.
 
 
-## TC.4.4.2 Add to basket two same items
+## TC.4.5.2 Add to basket two same items
 * 1. Enter https://sweetshop.netlify.app/sweets
 * 2. Press Add to basket: "Sherbert Straws" 2 times
 * 3. Observe navigation bar's Basket count
@@ -841,7 +841,7 @@ Actual result:
 STATUS: PASS.
 
 
-## TC.4.4.3 Add to basket multiple items
+## TC.4.5.3 Add to basket multiple items
 * 1. Enter https://sweetshop.netlify.app/sweets
 * 2. Press Add to basket: Sherbert Straws, Chocolate Cups, Sherbert Discs, Bon Bons.
 * 3. Observe navigation bar's Basket count
