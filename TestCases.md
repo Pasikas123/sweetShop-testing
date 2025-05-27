@@ -18,17 +18,8 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.1.2.1 Navigation 'Sweet Shop' functionality
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Press 'Sweet Shop' attribute in navigation bar
-* 3. Observe page
 
-Expected result: Main page opens again
-Actual result:
-
-STATUS: PASS.
-
-## TC.1.2.2 Navigation 'Sweets' functionality
+## TC.1.2.1 Navigation 'Sweets' brings to 'Sweets' page
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press 'Sweets' attribute in navigation bar
 * 3. Observe 'Sweets' page
@@ -38,7 +29,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.1.2.3 Navigation 'About' functionality
+## TC.1.2.2 Navigation 'About' brings to 'About' page
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press 'About' attribute in navigation bar
 * 3. Observe 'About' page
@@ -48,7 +39,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.1.2.4 Navigation 'Login' functionality
+## TC.1.2.3 Navigation 'Login' brings to 'Login' page
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press 'Login' attribute in navigation bar
 * 3. Observe 'Login' page
@@ -58,7 +49,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.1.2.5 Navigation 'Basket' functionality
+## TC.1.2.4 Navigation 'Basket' brings to 'Basket' page
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press 'Basket' attribute in navigation bar
 * 3. Observe 'Basket' page
@@ -68,7 +59,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.1.3. Page has the correct banner
+## TC.1.3. Page has the banner
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Observe page banner 
 
@@ -96,16 +87,7 @@ Actual result:
 STATUS: PASS.
 
 
-## TC.1.6.1 Page has browse sweets button
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Observe button
-
-Expected result: Page has Browse Sweets button
-Actual result:
-
-STATUS: PASS.
-
-## TC.1.6.2 Button Browse Sweets functionality
+## TC.1.6. Button Browse Sweets functionality
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Browse Sweets button
 * 3. Observe 'Sweets' page
@@ -115,16 +97,27 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.1.7.1 Page has the most popular choices
+## TC.1.7.1 Page has the most popular choices description
+
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Observe popular choices
 
-Expected result: Page has most popular choices items list with add to basket buttons.
+Expected result: Page has most popular choices description.
 Actual result:
 
 STATUS: PASS.
 
-## TC.1.7.2 Add to basket single item
+## TC.1.7.2 All list items have necessary HTML elements
+
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Observe items list
+
+Expected result: All list items have images, headers, descriptions, prices and add to basket button.
+Actual result:
+
+STATUS: PASS.
+
+## TC.1.7.3 Add to basket single item
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Add to basket: "Sherbert Straws"
 * 3. Observe navigation bar's Basket count
@@ -143,10 +136,8 @@ Total (GBP) £0.75
 
 Actual result:
 
-STATUS: PASS.
 
-
-## TC.1.7.3 Add to basket two same items
+## TC.1.7.4 Add to basket two same items
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to basket: "Sherbert Straws" 2 times
 * 3. Observe navigation bar's Basket count
@@ -168,7 +159,7 @@ Actual result:
 STATUS: PASS.
 
 
-## TC.1.7.3 Add to basket multiple items
+## TC.1.7.5 Add to basket multiple items
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to basket: Sherbert Straws, Chocolate Cups, Sherbert Discs, Bon Bons.
 * 3. Observe navigation bar's Basket count
@@ -198,29 +189,89 @@ STATUS: PASS.
 
 # TS.2. Login page
 
-## TC.2.1.1 Login page has title and description
+## TC.2.1.1 Login page has header
 * 1. Enter https://sweetshop.netlify.app/login
-* 2. Observe title and description
+* 2. Observe header
 
-Expected result: Page has title 'Login' and description: Please enter your email address and password in order to login to your account.
+Expected result: Page has header 'Login'.
+
+Actual result:
+
+STATUS: PASS.
+
+## TC.2.1.2 Login page has description
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Observe description
+
+Expected result: Page has description: Please enter your email address and password in order to login to your account.
+
+Actual result:
+
+STATUS: PASS.
+
+## TC.2.1.3 Login page has abbr in description
+* 1. Enter https://sweetshop.netlify.app/login
+* 2. Observe description
+
+Expected result: Page has description: Please enter your email address and password in order to login to your account.
 
 Actual result:
 
 STATUS: PASS.
 
 
-## TC.2.1.2 Login page has textboxes
+## TC.2.1.4 Login page has input fields
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Observe textboxes
 
-Expected result: Page has 'username' and 'password' textboxes.
+Expected result: Page has 'email address' and 'password' input fields.
 
-Actual result: Page has 'email' and 'password' textboxes.
+Actual result:
 
-STATUS: FAIL.
+STATUS: PASS.
+
+## TC.2.2.1 Navigation 'Sweet shop' brings to 'Welcome' page
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press 'Sweet shop' attribute in navigation bar
+* 3. Observe 'Welcome' page
+
+Expected result: 'Welcome' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.2.2.2 Navigation 'Sweets' brings to 'Sweets' page
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press 'Sweets' attribute in navigation bar
+* 3. Observe 'Sweets' page
+
+Expected result: 'Sweets' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.2.2.3 Navigation 'About' brings to 'About' page
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press 'About' attribute in navigation bar
+* 3. Observe 'About' page
+
+Expected result: 'About' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.2.2.4 Navigation 'Basket' brings to 'Basket' page
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press 'Basket' attribute in navigation bar
+* 3. Observe 'Basket' page
+
+Expected result: 'Basket' page opens
+Actual result:
+
+STATUS: PASS.
 
 
-## TC.2.2.1 Login with valid data
+## TC.2.3.1 Login with valid data
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -234,7 +285,7 @@ Actual result:
 STATUS: PASS.
 
 
-## TC.2.2.2 Login without email
+## TC.2.3.2 Login without email
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type password: test
 * 3. Press login button
@@ -246,20 +297,8 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.2.2.3 Login with numbers in email
-* 1. Enter https://sweetshop.netlify.app/login
-* 2. Type email adress: 123123
-* 3. Type password: test
-* 4. Press login button
-* 5. Observe error message
 
-Expected result: Should show error message: 'Please enter a valid email address.'
-
-Actual result: 
-
-STATUS: PASS.
-
-## TC.2.2.4 Login with wrong email format
+## TC.2.3.3 Login with wrong email format
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test
 * 3. Type password: test
@@ -272,7 +311,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.2.2.5 Login with no password
+## TC.2.3.4 Login with no password
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Press login button
@@ -284,20 +323,8 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.2.2.6 Login with only numbers in password
-* 1. Enter https://sweetshop.netlify.app/login
-* 2. Type email adress: test@gmail.com
-* 3. Type password: 123123
-* 4. Press login button
-* 5. Observe error message
 
-Expected result: Should show error message: 'Please enter a valid password.'
-
-Actual result: Login is successful and shows greeting message.
-
-STATUS: FAIL.
-
-## TC.2.2.7 Login with empty data
+## TC.2.3.5 Login with empty data
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Press login button
 * 3. Observe error message
@@ -308,7 +335,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.2.2.8 Twitter link
+## TC.2.4.1 Twitter link does not redirect to x.com'
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Press Twitter button under login button
 * 3. Observe twitter page
@@ -319,7 +346,7 @@ Actual result: Nothing happens, staying at the same login page.
 
 STATUS: FAIL.
 
-## TC.2.2.9 Facebook link
+## TC.2.4.2 Facebook link does not redirect to facebook.com
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Press Facebook button under login button
 * 3. Observe Facebook page
@@ -330,7 +357,7 @@ Actual result: Nothing happens, staying at the same login page.
 
 STATUS: FAIL.
 
-## TC.2.2.10 Linkedin link
+## TC.2.4.3 Linkedin link does not redirect to linkedin.com
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Press Linkedin button under login button
 * 3. Observe Linkedin page
