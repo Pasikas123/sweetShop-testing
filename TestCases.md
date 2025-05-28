@@ -927,7 +927,6 @@ STATUS: PASS.
 
 # TS.6. Basket page
 
-
 ## TC.6.1 Page has the header
 * 1. Enter https://sweetshop.netlify.app/basket
 * 2. Observe page header
@@ -946,78 +945,142 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.3. Page has the Billing adress
+## TC.6.3. Page has the Billing adress header
 * 1. Enter https://sweetshop.netlify.app/basket
-* 2. Observe page Billing adress section
+* 2. Observe page Billing adress header
 
-Expected result: Page has Billing adress header with form below.
+Expected result: Page has Billing adress header
 Actual result:
 
 STATUS: PASS.
 
 
-## TC.6.4. Page has the Payment
+## TC.6.4. Page has the billing and payment form
 * 1. Enter https://sweetshop.netlify.app/basket
-* 2. Observe page Payment section
+* 2. Observe page billing and payment form
 
-Expected result: Page has Payment header with form below.
+Expected result: Page has the billing and payment form.
 Actual result:
 
 STATUS: PASS.
 
-## TC.6.5. Page has the Continue to checkout button
-* 1. Enter https://sweetshop.netlify.app/basket
-* 2. Observe Continue to checkout button
 
-Expected result: Page has the Continue to checkout button.
+
+## TC.6.5 Page has the Your Basket information
+* 1. Enter https://sweetshop.netlify.app/basket
+* 2. Observe page Your basket
+
+Expected result: Page has Your basket with total amount.
 Actual result:
 
 STATUS: PASS.
 
-## TC.6.6.1 Page has the Your Basket information
+## TC.6.6 Page has the Delivery options
 * 1. Enter https://sweetshop.netlify.app/basket
-* 2. Observe page Your basket section
+* 2. Observe page Delivery header and radio buttons
 
-Expected result: Page has Your basket section with total amount.
+Expected result: Page has Delivery header with radio buttons: Collect (FREE), Standard Shipping (£1.99).
 Actual result:
 
 STATUS: PASS.
 
-## TC.6.6.2 Basket shows added items correctly
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Chocolate Cups, Bon Bons.
+## TC.6.7 Page has the Promo code with button
+* 1. Enter https://sweetshop.netlify.app/basket
+* 2. Observe page Promo code input with button
+
+Expected result: Page has Promo code input with Redeem button nearby.
+Actual result:
+
+STATUS: PASS.
+
+## TC.6.8 Page has the Empty Basket button
+* 1. Enter https://sweetshop.netlify.app/basket
+* 2. Observe page Empty Basket button
+
+Expected result: Page has Empty Basket button.
+Actual result:
+
+STATUS: PASS.
+
+
+## TC.6.9.1 Navigation functionality (sweet shop)
+* 1. Enter https://sweetshop.netlify.app/basket
+* 2. Pressing Sweet Shop navigation attribute
+* 3. Observe main page
+
+Expected result: Show main page.
+Actual result:
+
+STATUS: PASS.
+
+## TC.6.9.2 Navigation functionality (sweets)
+* 1. Enter https://sweetshop.netlify.app/basket
+* 2. Pressing Sweets navigation attribute
+* 3. Observe Sweets page
+
+Expected result: Show Sweets page.
+Actual result:
+
+STATUS: PASS.
+
+## TC.6.9.3 Navigation functionality (about)
+* 1. Enter https://sweetshop.netlify.app/basket
+* 2. Pressing About navigation attribute
+* 3. Observe About page
+
+Expected result: Show About page.
+Actual result: Page throws error: Page not found. Looks like you’ve followed a broken link or entered a URL that doesn’t exist on this site.
+
+STATUS: FAIL.
+
+## TC.6.9.4 Navigation functionality (login)
+* 1. Enter https://sweetshop.netlify.app/basket
+* 2. Pressing Login navigation attribute
+* 3. Observe Login page
+
+Expected result: Show Login page.
+Actual result:
+
+STATUS: PASS.
+
+
+## TC.6.10.1 Delete single item from 1 total item
+* 1. Enter https://sweetshop.netlify.app/sweets
+* 2. Press Add to Basket: Wham bars.
 * 3. Enter https://sweetshop.netlify.app/basket
-* 4. Observe your basket
-
-Expected result: Your basket contains items added to basket with correct amounts and values.
-Actual result:
-
-STATUS: PASS.
-
-
-## TC.6.6.3 Delete item from basket
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Chocolate Cups, Bon Bons.
-* 3. Enter https://sweetshop.netlify.app/basket
-* 4. Delete Item: Chocolate Cups.
+* 4. Delete Item: Wham bars.
 * 5. Observe your basket
 
-Expected result: Your basket contains: Strawberry Bon Bons £1.00 x 1, Total (GBP) £1.00
+Expected result: Your basket is empty.
 Actual result:
 
 STATUS: PASS.
 
+## TC.6.10.2 Delete single item from 4 total items
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press Add to Basket: Sherbert Straws, Chocolate Cups, Sherbet Discs, Strawberry Bon Bons.
+* 3. Enter https://sweetshop.netlify.app/basket
+* 4. Delete Item: Sherbet discs.
+* 5. Observe your basket
 
-## TC.6.7.1 Page has the Delivery information
-* 1. Enter https://sweetshop.netlify.app/basket
-* 2. Observe page Delivery section
-
-Expected result: Page has Delivery section with selections: Collect (FREE), Standard Shipping (£1.99).
+Expected result: Your basket contains 3 items, and total amount is: £2.75.
 Actual result:
 
 STATUS: PASS.
 
-## TC.6.7.2 Choose Collect (FREE) with items in cart
+## TC.6.10.3 Delete two items from 4 total items
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press Add to Basket: Sherbert Straws, Chocolate Cups, Sherbet Discs, Strawberry Bon Bons.
+* 3. Enter https://sweetshop.netlify.app/basket
+* 4. Delete Items: Sherbet discs, Strawberry Bon Bons.
+* 5. Observe your basket
+
+Expected result: Your basket contains 2 items, and total amount is: £1.75.
+Actual result:
+
+STATUS: PASS.
+
+## TC.6.11.1 Choose Collect (FREE) with items in cart
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1029,17 +1092,17 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.7.3 Choose Collect (FREE) without items in cart
+## TC.6.11.3 Choose Collect (FREE) without items in cart
 * 1. Enter https://sweetshop.netlify.app/basket
 * 2. Press Collect (FREE) selection
 * 3. Observe your basket
 
-Expected result: Your Basket total amount should be: £1.99
+Expected result: Your Basket total amount should be: £0.00.
 Actual result:
 
 STATUS: PASS.
 
-## TC.6.7.4 Choose Standard Shipping (£1.99) with items in cart
+## TC.6.11.4 Choose Standard Shipping (£1.99) with same items in cart
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1051,19 +1114,19 @@ Actual result: Your Basket total amount is: £21.99
 
 STATUS: FAIL.
 
-## TC.6.7.5 Choose Standard Shipping (£1.99) with different items in cart
+## TC.6.11.5 Choose Standard Shipping (£1.99) with different items in cart
 * 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Sherbet Discs, Sherbert Straws.
+* 2. Press Add to Basket 2 times: Sherbert Straws.
 * 3. Enter https://sweetshop.netlify.app/basket
 * 4. Press Standard Shipping (£1.99) selection
 * 5. Observe your basket
 
-Expected result: Your Basket total amount should be: £3,69
+Expected result: Your Basket total amount should be: £3,49
 Actual result: Your Basket total amount is: £NaN.
 
 STATUS: FAIL.
 
-## TC.6.7.6 Choose Standard Shipping (£1.99) without items in cart
+## TC.6.11.6 Choose Standard Shipping (£1.99) without items in cart
 * 1. Enter https://sweetshop.netlify.app/basket
 * 2. Press Standard Shipping (£1.99) selection
 * 3. Observe your basket
@@ -1073,54 +1136,36 @@ Actual result:
 
 STATUS: PASS.
 
-
-## TC.6.8.1 Page has the Promo code
-* 1. Enter https://sweetshop.netlify.app/basket
-* 2. Observe page Promo code input
-
-Expected result: Page has Promo code input with Redeem button nearby.
-Actual result:
-
-STATUS: PASS.
-
-## TC.6.8.2 Promo code empty
+## TC.6.12.1 Promo code empty
 * 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Sherbet Discs, Sherbert Straws.
+* 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
 * 4. Leaving empty promo code
 * 5. Pressing Redeem button
 * 5. Observe error message
 
-Expected result: Page should throw error message: "Please enter correct Promo code".
+Expected result: Page should throw error message: "Please input a valid promo code".
 Actual result: Page restarts, no error message shown.
 
 STATUS: FAIL.
 
-## TC.6.8.3 Promo code entering
+## TC.6.12.2 Promo code entering
 * 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Sherbet Discs, Sherbert Straws.
+* 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
 * 4. Typing in promo code input: test
 * 5. Pressing Redeem button
 * 5. Observe message
 
-Expected result: Page should throw error message: "Please enter correct Promo code" or inform that promo code was accepted.
+Expected result: Page should throw error message: "Please input a valid promo code".
 Actual result: Page restarts, no message shown.
 
 STATUS: FAIL.
 
-## TC.6.9.1 Page has the Empty Basket button
-* 1. Enter https://sweetshop.netlify.app/basket
-* 2. Observe page Empty Basket button
 
-Expected result: Page has Empty Basket button.
-Actual result:
-
-STATUS: PASS.
-
-## TC.6.9.2 Empty basket button functionality
+## TC.6.13.1 Empty basket button functionality
 * 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Sherbet Discs, Sherbert Straws.
+* 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
 * 4. Pressing Empty Basket button
 * 5. Observe alert message
@@ -1132,7 +1177,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.9.3 Empty basket button with no items in basket
+## TC.6.13.2 Empty basket button with no items in basket
 * 1. Enter https://sweetshop.netlify.app/basket
 * 2. Pressing Empty Basket button
 * 3. Observe error message
@@ -1143,9 +1188,31 @@ Actual result: No error message, nothing happens with page.
 STATUS: FAIL.
 
 
-## TC.6.10.1 Make an order with valid data
+## TC.6.14.1 Make an order with valid data (no items in basket)
+* 1. Enter https://sweetshop.netlify.app/basket
+* 2. Type valid data:
+* Enter First name: Test
+* Enter Last name: Test
+* Enter Email: tester@gmail.com
+* Enter Adress: Test str. 22-2
+* Select Country: United Kingdom
+* Select City: Bristol
+* Select Zip: 123123
+* Enter Name on card: Tester Tester
+* Enter Credit card number: 123123123123123
+* Enter Expiration: 08/28
+* Enter CVV: 123
+* 3. Press Collect (FREE) selection on Delivery options
+* 4. Press Continue to checkout button
+
+Expected result: After clicking continue to checkout button page should throw you error message, that there are no items in cart.
+Actual result: After clicking continue to checkout button, page restarts, no error message shown.
+
+STATUS: FAIL.
+
+## TC.6.14.2 Make an order with valid data (with items in basket)
 * 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Sherbet Discs, Sherbert Straws.
+* 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
 * 4. Type valid data:
 * Enter First name: Test
@@ -1167,9 +1234,9 @@ Actual result: Page restarts, and nothing happens.
 
 STATUS: FAIL.
 
-## TC.6.10.2 Make an order with no data
+## TC.6.14.3 Make an order with no billing information
 * 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Sherbet Discs, Sherbert Straws.
+* 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
 * 4. Leave all Billing adress and payment inputs empty.
 * 5. Press Collect (FREE) selection on Delivery options
@@ -1180,9 +1247,9 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.10.3 Make an order with invalid data
+## TC.6.14.4 Make an order with invalid data
 * 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Sherbet Discs, Sherbert Straws.
+* 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
 * 4. Type valid data:
 * Enter First name: 123123
@@ -1204,9 +1271,9 @@ Actual result: First name, Last name, Adresss, Zip, Name on card, Credit cart nu
 
 STATUS: FAIL.
 
-## TC.6.10.4 Make an order with different invalid data
+## TC.6.14.5 Make an order with different invalid data
 * 1. Enter https://sweetshop.netlify.app/
-* 2. Press Add to Basket: Sherbet Discs, Sherbert Straws.
+* 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
 * 4. Type valid data:
 * Enter First name: 123123
@@ -1227,44 +1294,3 @@ Expected result: First name, Last name, Adresss, Zip, Name on card, Credit cart 
 Actual result: Page restarts, nothing happens, no error messages shown.
 
 STATUS: FAIL.
-
-
-## TC.6.11.1 Navigation functionality (sweet shop)
-* 1. Enter https://sweetshop.netlify.app/basket
-* 2. Pressing Sweet Shop navigation attribute
-* 3. Observe main page
-
-Expected result: Show main page.
-Actual result:
-
-STATUS: PASS.
-
-## TC.6.11.2 Navigation functionality (sweets)
-* 1. Enter https://sweetshop.netlify.app/basket
-* 2. Pressing Sweets navigation attribute
-* 3. Observe Sweets page
-
-Expected result: Show Sweets page.
-Actual result:
-
-STATUS: PASS.
-
-## TC.6.11.3 Navigation functionality (about)
-* 1. Enter https://sweetshop.netlify.app/basket
-* 2. Pressing About navigation attribute
-* 3. Observe About page
-
-Expected result: Show About page.
-Actual result: Page throws error: Page not found. Looks like you’ve followed a broken link or entered a URL that doesn’t exist on this site.
-
-STATUS: FAIL.
-
-## TC.6.11.4 Navigation functionality (login)
-* 1. Enter https://sweetshop.netlify.app/basket
-* 2. Pressing Login navigation attribute
-* 3. Observe Login page
-
-Expected result: Show Login page.
-Actual result:
-
-STATUS: PASS.

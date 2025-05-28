@@ -41,18 +41,7 @@ describe('Sweets page testing', () => {
     describe('Adding to basket', () => {
 
         it("Add to basket single item Wham Bars", () => {
-            cy.get('a[data-name="Wham Bar"]').click();
-
-            cy.contains('a span', '1').should('be.visible');
-            cy.contains('a', 'Basket').click();
-
-            cy.get('#basketItems')
-                .should('contain', 'Wham Bar')
-                .and('contain', 'x 1')
-                .and('contain', '£0.15')
-
-            cy.get('.list-group-item strong').should('contain', '£0.15');
-
+            cy.addWhamBars();
         });
 
         it("Add to basket two same items", () => {
@@ -61,7 +50,6 @@ describe('Sweets page testing', () => {
 
         it("Add to basket multiple items", () => {
             cy.addMultipleItems();
-            cy.checkMultipleItems();
         });
     });
 

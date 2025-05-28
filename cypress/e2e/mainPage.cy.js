@@ -77,8 +77,6 @@ describe('Main page testing', () => {
 
       cy.get('.list-group-item strong').should('contain', '£0.75');
 
-      cy.contains('a', 'Empty Basket').click();
-
     });
 
     it("Add to basket two same items", () => {
@@ -87,7 +85,6 @@ describe('Main page testing', () => {
 
     it("Add to basket multiple items", () => {
       cy.addMultipleItems();
-      cy.checkMultipleItems();
     });
   });
 });

@@ -178,6 +178,9 @@ describe('Your account page testing', () => {
                 .find('td')
                 .should('contain', '0.75')
         });
+    });
+
+    describe('Your basket', () => {
 
         it("Your Basket shows added items", () => {
             cy.visit('/');
