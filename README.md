@@ -54,12 +54,12 @@ To run this program you need any Windows or Linux OS, and Visual Studio Code pro
 2. Open terminal within this project.
 3. Run in terminal: npm install.
 
-### 🚀 Running the Tests
+## 🚀 Running the Tests
 
-#### 📄 Manual test cases
+### 📄 Manual test cases
 - Open `TestCases.md` file
 
-#### 🤖 Cypress tests
+### 🤖 Cypress tests
 1. Run in terminal:
 npm run cy
 2. In Cypress UI:
