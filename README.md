@@ -10,9 +10,30 @@ The goal of the project was to validate the website's core functionalities throu
 
 ## Getting Started
 
+### Example of how it looks
+
+#### Test cases in TestCases.md
+![image](https://github.com/user-attachments/assets/4dbcbdef-bdd5-4b30-bfee-b2c1ee3132ab)
+![image](https://github.com/user-attachments/assets/cd7086f2-a5a6-4c3e-8364-10194353ae57)
+![image](https://github.com/user-attachments/assets/a72d96d0-7f1b-40df-ad41-fc363f84b750)
+
+#### Test cases in Cypress
+![image](https://github.com/user-attachments/assets/30d9cd12-4912-4016-a57c-44dc0bdf68b6)
+![image](https://github.com/user-attachments/assets/6ea7e4a1-b256-4e29-bcda-bf6aa38965e6)
+
+#### Jira test cases and bugs
+##### Test cases
+![image](https://github.com/user-attachments/assets/225511ca-22c7-4f4f-9003-1478fbdb404c)
+![image](https://github.com/user-attachments/assets/74e00082-f25c-4d28-89dd-8fac8e9ce54b)
+![image](https://github.com/user-attachments/assets/5b22bd23-2c55-4315-a1e4-c0dd1403939b)
+![image](https://github.com/user-attachments/assets/8dccc449-5f81-4e8a-bae6-81ab3da683ea)
+![image](https://github.com/user-attachments/assets/6c34ff19-dcfe-48ea-aa92-c7e46e50102c)
+##### Bugs
+![image](https://github.com/user-attachments/assets/43a6ee66-1e9b-4be7-a858-1036eef9fa17)
+
 ### Dependencies
 
-To run this program you need any Windows or Linux OS, and Visual Studio Code (VS code) program.
+To run this program you need any Windows or Linux OS, and Visual Studio Code (VS code) program with Node.js installed.
 
 ### Installing
 
@@ -29,10 +50,13 @@ If you want to see manual test cases:
 If you want to open automated test cases:
 ```
 -Write in terminal: npm run cy
--Press E2E testing ![image](https://github.com/user-attachments/assets/f804635e-f3b7-4dd0-a569-8035068b48e9)
--Press Start E2E Testing ![image](https://github.com/user-attachments/assets/651b221c-427d-4aad-b253-e093d987127b)
--Choose any of provided tests ![image](https://github.com/user-attachments/assets/0088a09c-f83b-4776-9072-0e3f7aca4eba)
+-Press E2E testing
+-Press Start E2E Testing
+-Choose any of provided tests 
 ```
+![image](https://github.com/user-attachments/assets/f804635e-f3b7-4dd0-a569-8035068b48e9)
+![image](https://github.com/user-attachments/assets/651b221c-427d-4aad-b253-e093d987127b)
+![image](https://github.com/user-attachments/assets/0088a09c-f83b-4776-9072-0e3f7aca4eba)
 
 ## Authors
 
