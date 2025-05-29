@@ -5,6 +5,7 @@ Sweet Shop – Manual & Automated Testing
 ## Description
 
 This project contains automated and manual tests for the demo e-commerce website [Sweet Shop](https://sweetshop.netlify.app/). 
+![image](https://github.com/user-attachments/assets/6616367f-5ada-43e8-bdc2-46c68d912b0f)
 The goal of the project was to validate the website's core functionalities through Cypress-based end-to-end testing, along with clearly documented manual test cases. Various scenarios such as visibility, navigation, login, buttons and basket functionality were covered.
 
 ## Getting Started
