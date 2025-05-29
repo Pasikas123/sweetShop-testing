@@ -10,15 +10,15 @@ This project contains automated and manual tests for the demo e-commerce website
 
 ## 📂 Project Structure
 
+```
 sweetShop-testing/
 ├── cypress/
-│ ├── e2e/
-│ ├── support/
-│ └── ...
+│   ├── e2e/
+│   ├── support/
 ├── TestCases.md
 ├── README.md
 ├── package.json
-└── ...
+```
 
 ## Getting Started
 
