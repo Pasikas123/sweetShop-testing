@@ -25,20 +25,29 @@ describe('Login page testing', () => {
     });
 
     describe('Navigation links', () => {
-        it("Navigation 'Sweet Shop' brings back to main page", () => {
-            cy.navShop();
+
+        it("Navigation 'Sweet shop' brings to 'Welcome' page", () => {
+            cy.contains('a', 'Sweet Shop').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/');
+            cy.contains('h1', 'Welcome to the sweet shop!').should('be.visible');
         });
 
         it("Navigation 'Sweets' brings to 'Sweets' page", () => {
-            cy.navSweets();
+            cy.contains('a', 'Sweets').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/sweets');
+            cy.contains('h1', 'Browse sweets').should('be.visible');
         });
 
         it("Navigation 'About' brings to 'About' page", () => {
-            cy.navAbout();
+            cy.contains('a', 'About').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/about');
+            cy.contains('p', 'An intentionally broken web application to help demonstrate Chrome DevTools.').should('be.visible');
         });
 
         it("Navigation 'Basket' brings to 'Basket' page", () => {
-            cy.navBasket();
+            cy.contains('a', 'Basket').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/basket');
+            cy.contains('h1', 'Your Basket').should('be.visible');
         });
 
     });
@@ -58,7 +67,7 @@ describe('Login page testing', () => {
 
             cy.contains('button', 'Login').click();
 
-            cy.invalidEmail();
+            cy.contains('.invalid-email', 'Please enter a valid email address').should('be.visible');
 
         });
 
@@ -68,7 +77,7 @@ describe('Login page testing', () => {
 
             cy.contains('button', 'Login').click();
 
-            cy.invalidEmail();
+            cy.contains('.invalid-email', 'Please enter a valid email address').should('be.visible');
 
         });
 
@@ -77,14 +86,14 @@ describe('Login page testing', () => {
 
             cy.contains('button', 'Login').click();
 
-            cy.invalidPass();
+            cy.contains('.invalid-password', 'Please enter a valid password').should('be.visible');
 
         });
 
         it('Login with empty data', () => {
             cy.contains('button', 'Login').click();
-            cy.invalidEmail();
-            cy.invalidPass();
+            cy.contains('.invalid-email', 'Please enter a valid email address').should('be.visible');
+            cy.contains('.invalid-password', 'Please enter a valid password').should('be.visible');
 
         });
 

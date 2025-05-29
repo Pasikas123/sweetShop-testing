@@ -18,47 +18,6 @@ Actual result:
 
 STATUS: PASS.
 
-
-## TC.1.2.1 Navigation 'Sweets' brings to 'Sweets' page
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Press 'Sweets' attribute in navigation bar
-* 3. Observe 'Sweets' page
-
-Expected result: 'Sweets' page opens
-Actual result:
-
-STATUS: PASS.
-
-## TC.1.2.2 Navigation 'About' brings to 'About' page
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Press 'About' attribute in navigation bar
-* 3. Observe 'About' page
-
-Expected result: 'About' page opens
-Actual result:
-
-STATUS: PASS.
-
-## TC.1.2.3 Navigation 'Login' brings to 'Login' page
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Press 'Login' attribute in navigation bar
-* 3. Observe 'Login' page
-
-Expected result: 'Login' page opens
-Actual result:
-
-STATUS: PASS.
-
-## TC.1.2.4 Navigation 'Basket' brings to 'Basket' page
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Press 'Basket' attribute in navigation bar
-* 3. Observe 'Basket' page
-
-Expected result: 'Basket' page opens
-Actual result:
-
-STATUS: PASS.
-
 ## TC.1.3. Page has the banner
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Observe page banner 
@@ -86,18 +45,7 @@ Actual result:
 
 STATUS: PASS.
 
-
-## TC.1.6. Button Browse Sweets functionality
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Press Browse Sweets button
-* 3. Observe 'Sweets' page
-
-Expected result: 'Sweets' page opens up
-Actual result:
-
-STATUS: PASS.
-
-## TC.1.7.1 Page has the most popular choices description
+## TC.1.6.1 Page has the most popular choices description
 
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Observe popular choices
@@ -107,7 +55,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.1.7.2 All list items have necessary HTML elements
+## TC.1.6.2 All list items have necessary HTML elements
 
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Observe items list
@@ -117,71 +65,107 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.1.7.3 Add to basket single item
+
+## TC.1.7. Page has the footer
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Observe footer
+
+Expected result: Page has the footer which is: 'Sweet Shop Project 2018'.
+Actual result:
+
+STATUS: PASS.
+
+
+## TC.1.8.1 Navigation 'Sweets' brings to 'Sweets' page
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press 'Sweets' attribute in navigation bar
+* 3. Observe 'Sweets' page
+
+Expected result: 'Sweets' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.1.8.2 Navigation 'About' brings to 'About' page
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press 'About' attribute in navigation bar
+* 3. Observe 'About' page
+
+Expected result: 'About' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.1.8.3 Navigation 'Login' brings to 'Login' page
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press 'Login' attribute in navigation bar
+* 3. Observe 'Login' page
+
+Expected result: 'Login' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.1.8.4 Navigation 'Basket' brings to 'Basket' page
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press 'Basket' attribute in navigation bar
+* 3. Observe 'Basket' page
+
+Expected result: 'Basket' page opens
+Actual result:
+
+STATUS: PASS.
+
+## TC.1.9. Button Browse Sweets functionality
+* 1. Enter https://sweetshop.netlify.app/
+* 2. Press Browse Sweets button
+* 3. Observe 'Sweets' page
+
+Expected result: 'Sweets' page opens up
+Actual result:
+
+STATUS: PASS.
+
+## TC.1.10.1 Add to basket single item
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Add to basket: "Sherbert Straws"
 * 3. Observe navigation bar's Basket count
-* 4. Press "Basket" on navigation bar
-* 5. Observe Your Basket information
 
 Expected result: 
 1. Open main page
 2. Adds item to basket
 3. Basket count becomes "1"
-4. Opens Basket page
-5. Basket contains: 
-Sherbert Straws £0.75
-x 1
-Total (GBP) £0.75
 
 Actual result:
 
+STATUS: PASS.
 
-## TC.1.7.4 Add to basket two same items
+
+## TC.1.10.2 Add to basket two same items
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to basket: "Sherbert Straws" 2 times
 * 3. Observe navigation bar's Basket count
-* 4. Press "Basket" on navigation bar
-* 5. Observe Your Basket information
 
 Expected result: 
 1. Open main page
 2. Adds items to basket
 3. Basket count becomes "2"
-4. Opens Basket page
-5. Basket contains: 
-Sherbert Straws £0.75
-x 2
-Total (GBP) £1.50
 
 Actual result:
 
 STATUS: PASS.
 
 
-## TC.1.7.5 Add to basket multiple items
+## TC.1.10.3 Add to basket multiple items
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to basket: Sherbert Straws, Chocolate Cups, Sherbert Discs, Bon Bons.
 * 3. Observe navigation bar's Basket count
-* 4. Press "Basket" on navigation bar
-* 5. Observe Your Basket information
 
 Expected result: 
 1. Open main page
 2. Adds items to basket
 3. Basket count becomes "4"
-4. Opens Basket page
-5. Basket should contain all items with correct values (total: £3.70, every item x1)
 
-Actual result:
-
-STATUS: PASS.
-
-## TC.1.8. Page has the footer
-* 1. Enter https://sweetshop.netlify.app/
-* 2. Observe footer
-
-Expected result: Page has the footer which is: 'Sweet Shop Project 2018'.
 Actual result:
 
 STATUS: PASS.
@@ -222,7 +206,7 @@ STATUS: PASS.
 
 ## TC.2.1.4 Login page has input fields
 * 1. Enter https://sweetshop.netlify.app/login
-* 2. Observe textboxes
+* 2. Observe input fields
 
 Expected result: Page has 'email address' and 'password' input fields.
 
@@ -335,7 +319,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.2.4.1 Twitter link does not redirect to x.com'
+## TC.2.4.1 Twitter link does not redirect to x.com
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Press Twitter button under login button
 * 3. Observe twitter page
@@ -538,7 +522,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.3.3.1 Description shows incorrect email
+## TC.3.3.1 Description shows correct email
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -581,7 +565,7 @@ Actual result: After clicking press Order Number attribute, nothing happens.
 
 STATUS: FAIL.
 
-## TC.3.3.2 Sorting by number by double click (desc order)
+## TC.3.4.2 Sorting by number by double click (desc order)
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -594,7 +578,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.3.3.3 Sorting by number by triple click (asc order)
+## TC.3.4.3 Sorting by number by triple click (asc order)
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -610,7 +594,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.3.3.4 Sorting by date (desc order)
+## TC.3.4.4 Sorting by date (desc order)
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -623,7 +607,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.3.3.5 Sorting by date (asc order)
+## TC.3.4.5 Sorting by date (asc order)
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -640,7 +624,7 @@ Actual result:
 STATUS: PASS.
 
 
-## TC.3.3.6 Sorting by Order Description (desc order)
+## TC.3.4.6 Sorting by Order Description (desc order)
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -653,7 +637,7 @@ Actual result: Orders are not sort by alphabet descending order (Swansea Mixture
 
 STATUS: FAIL.
 
-## TC.3.3.7 Sorting by Order Description (asc order)
+## TC.3.4.7 Sorting by Order Description (asc order)
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -667,7 +651,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.3.3.8 Sorting by Order Total (desc order)
+## TC.3.4.8 Sorting by Order Total (desc order)
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -680,7 +664,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.3.3.8 Sorting by Order Total (asc order)
+## TC.3.4.8 Sorting by Order Total (asc order)
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Type email adress: test@gmail.com
 * 3. Type password: test
@@ -694,7 +678,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.3.4.1 Your basket shows added items
+## TC.3.5.1 Your basket shows added items
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Add to basket: Chocolate Cups, Bon Bons, Sherbert Straws, Sherbert Discs.
 * 3. Enter https://sweetshop.netlify.app/login
@@ -709,7 +693,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.3.4.2 Deleting items in Your Basket
+## TC.3.5.2 Deleting items in Your Basket
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Add to basket: Chocolate Cups, Bon Bons, Sherbert Straws, Sherbert Discs.
 * 3. Enter https://sweetshop.netlify.app/login
@@ -801,18 +785,11 @@ STATUS: PASS.
 * 1. Enter https://sweetshop.netlify.app/sweets
 * 2. Press Add to basket: Wham Bars.
 * 3. Observe navigation bar's Basket count
-* 4. Press "Basket" on navigation bar
-* 5. Observe Your Basket information
 
 Expected result: 
 1. Open Sweets page
 2. Adds item to basket
 3. Basket count becomes "1"
-4. Opens Basket page
-5. Basket should contain:
-Wham Bar £0.15
-x 1
-Total (GBP) £0.15
 
 Actual result:
 
@@ -823,18 +800,11 @@ STATUS: PASS.
 * 1. Enter https://sweetshop.netlify.app/sweets
 * 2. Press Add to basket: "Sherbert Straws" 2 times
 * 3. Observe navigation bar's Basket count
-* 4. Press "Basket" on navigation bar
-* 5. Observe Your Basket information
-
+  
 Expected result: 
 1. Open Sweets page
 2. Adds items to basket
 3. Basket count becomes "2"
-4. Opens Basket page
-5. Basket contains: 
-Sherbert Straws £0.75
-x 2
-Total (GBP) £1.50
 
 Actual result:
 
@@ -845,15 +815,11 @@ STATUS: PASS.
 * 1. Enter https://sweetshop.netlify.app/sweets
 * 2. Press Add to basket: Sherbert Straws, Chocolate Cups, Sherbert Discs, Bon Bons.
 * 3. Observe navigation bar's Basket count
-* 4. Press "Basket" on navigation bar
-* 5. Observe Your Basket information
 
 Expected result: 
 1. Open Sweets page
 2. Adds items to basket
 3. Basket count becomes "4"
-4. Opens Basket page
-5. Basket should contain all items with correct values (total: £3.70, every item x1)
 
 Actual result:
 
@@ -1043,8 +1009,58 @@ Actual result:
 
 STATUS: PASS.
 
+## TC.6.10.1 Add single item to basket
+* 1. Enter https://sweetshop.netlify.app/sweets
+* 2. Press Add to Basket: Wham bars.
+* 3. Enter https://sweetshop.netlify.app/basket
+* 5. Observe your basket
 
-## TC.6.10.1 Delete single item from 1 total item
+Expected result:
+1. Load Sweets page
+2. Adds to basket: Wham bars.
+3. Loads basket page
+4. Basket should contain:
+Wham Bar £0.15
+x 1
+Total (GBP) £0.15
+Actual result:
+
+STATUS: PASS.
+
+## TC.6.10.2 Add two same items to basket
+* 1. Enter https://sweetshop.netlify.app/sweets
+* 2. Press Add to Basket two times on: Sherbert Straws.
+* 3. Enter https://sweetshop.netlify.app/basket
+* 5. Observe your basket
+
+Expected result:
+1. Load Sweets page
+2. Adds to basket: 2 Sherbert Straws.
+3. Loads basket page
+4. Basket should contain:
+Sherbert Straws £0.75
+x 2
+Total (GBP) £1.50
+Actual result:
+
+STATUS: PASS.
+
+## TC.6.10.3 Add multiple items to basket
+* 1. Enter https://sweetshop.netlify.app/sweets
+* 2. Press Add to Basket two times on: Sherbert Straws, Sherbet Discs, Strawberry Bon Bons, Chocolate Cups.
+* 3. Enter https://sweetshop.netlify.app/basket
+* 5. Observe your basket
+
+Expected result:
+1. Load Sweets page
+2. Adds to basket: Sherbert Straws, Sherbet Discs, Strawberry Bon Bons, Chocolate Cups.
+3. Loads basket page
+4. Basket should contain all added items with correct names and values(Total £3.70)
+Actual result:
+
+STATUS: PASS.
+
+## TC.6.11.1 Delete single item from 1 total item
 * 1. Enter https://sweetshop.netlify.app/sweets
 * 2. Press Add to Basket: Wham bars.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1056,7 +1072,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.10.2 Delete single item from 4 total items
+## TC.6.11.2 Delete single item from 4 total items
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Sherbert Straws, Chocolate Cups, Sherbet Discs, Strawberry Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1068,7 +1084,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.10.3 Delete two items from 4 total items
+## TC.6.11.3 Delete two items from 4 total items
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Sherbert Straws, Chocolate Cups, Sherbet Discs, Strawberry Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1080,7 +1096,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.11.1 Choose Collect (FREE) with items in cart
+## TC.6.12.1 Choose Collect (FREE) with items in cart
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1092,7 +1108,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.11.3 Choose Collect (FREE) without items in cart
+## TC.6.12.3 Choose Collect (FREE) without items in cart
 * 1. Enter https://sweetshop.netlify.app/basket
 * 2. Press Collect (FREE) selection
 * 3. Observe your basket
@@ -1102,7 +1118,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.11.4 Choose Standard Shipping (£1.99) with same items in cart
+## TC.6.12.4 Choose Standard Shipping (£1.99) with different items in cart
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1114,7 +1130,7 @@ Actual result: Your Basket total amount is: £21.99
 
 STATUS: FAIL.
 
-## TC.6.11.5 Choose Standard Shipping (£1.99) with different items in cart
+## TC.6.12.5 Choose Standard Shipping (£1.99) with same items in cart
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket 2 times: Sherbert Straws.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1126,7 +1142,7 @@ Actual result: Your Basket total amount is: £NaN.
 
 STATUS: FAIL.
 
-## TC.6.11.6 Choose Standard Shipping (£1.99) without items in cart
+## TC.6.12.6 Choose Standard Shipping (£1.99) without items in cart
 * 1. Enter https://sweetshop.netlify.app/basket
 * 2. Press Standard Shipping (£1.99) selection
 * 3. Observe your basket
@@ -1136,7 +1152,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.12.1 Promo code empty
+## TC.6.13.1 Promo code empty
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1149,7 +1165,7 @@ Actual result: Page restarts, no error message shown.
 
 STATUS: FAIL.
 
-## TC.6.12.2 Promo code entering
+## TC.6.13.2 Promo code entering
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1163,7 +1179,7 @@ Actual result: Page restarts, no message shown.
 STATUS: FAIL.
 
 
-## TC.6.13.1 Empty basket button functionality
+## TC.6.14.1 Empty basket button functionality
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1177,7 +1193,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.13.2 Empty basket button with no items in basket
+## TC.6.14.2 Empty basket button with no items in basket
 * 1. Enter https://sweetshop.netlify.app/basket
 * 2. Pressing Empty Basket button
 * 3. Observe error message
@@ -1188,7 +1204,7 @@ Actual result: No error message, nothing happens with page.
 STATUS: FAIL.
 
 
-## TC.6.14.1 Make an order with valid data (no items in basket)
+## TC.6.15.1 Make an order with valid data (no items in basket)
 * 1. Enter https://sweetshop.netlify.app/basket
 * 2. Type valid data:
 * Enter First name: Test
@@ -1210,7 +1226,7 @@ Actual result: After clicking continue to checkout button, page restarts, no err
 
 STATUS: FAIL.
 
-## TC.6.14.2 Make an order with valid data (with items in basket)
+## TC.6.15.2 Make an order with valid data (with items in basket)
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1234,7 +1250,7 @@ Actual result: Page restarts, and nothing happens.
 
 STATUS: FAIL.
 
-## TC.6.14.3 Make an order with no billing information
+## TC.6.15.3 Make an order with no billing information
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1247,7 +1263,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.6.14.4 Make an order with invalid data
+## TC.6.15.4 Make an order with invalid data
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket
@@ -1271,7 +1287,7 @@ Actual result: First name, Last name, Adresss, Zip, Name on card, Credit cart nu
 
 STATUS: FAIL.
 
-## TC.6.14.5 Make an order with different invalid data
+## TC.6.15.5 Make an order with different invalid data
 * 1. Enter https://sweetshop.netlify.app/
 * 2. Press Add to Basket: Chocolate Cups, Bon Bons.
 * 3. Enter https://sweetshop.netlify.app/basket

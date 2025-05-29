@@ -51,27 +51,37 @@ describe('Your account page testing', () => {
     describe('Navigation links', () => {
         it("Navigation 'Sweet Shop' brings back to main page", () => {
             cy.validLogin();
-            cy.navShop();
+            cy.contains('a', 'Sweet Shop').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/');
+            cy.contains('h1', 'Welcome to the sweet shop!').should('be.visible');
         });
 
         it("Navigation 'Sweets' brings to 'Sweets' page", () => {
             cy.validLogin();
-            cy.navSweets();
+            cy.contains('a', 'Sweets').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/sweets');
+            cy.contains('h1', 'Browse sweets').should('be.visible');
         });
 
         it("Navigation 'About' brings to 'About' page", () => {
             cy.validLogin();
-            cy.navAbout();
+            cy.contains('a', 'About').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/about');
+            cy.contains('p', 'An intentionally broken web application to help demonstrate Chrome DevTools.').should('be.visible');
         });
 
         it("Navigation 'Login' brings to 'Login' page", () => {
             cy.validLogin();
-            cy.navLogin();
+            cy.contains('a', 'Login').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/login');
+            cy.contains('h1', 'Login').should('be.visible');
         });
 
         it("Navigation 'Basket' brings to 'Basket' page", () => {
             cy.validLogin();
-            cy.navBasket();
+            cy.contains('a', 'Basket').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/basket');
+            cy.contains('h1', 'Your Basket').should('be.visible');
         });
 
     });
@@ -187,7 +197,7 @@ describe('Your account page testing', () => {
             cy.addMultipleItems();
             cy.visit('/login');
             cy.validLogin();
-            cy.checkMultipleItems();
+            cy.get('span.badge').should('contain', '4');
         });
 
         it("Deleting items in Your Basket", () => {
@@ -195,7 +205,7 @@ describe('Your account page testing', () => {
             cy.addMultipleItems();
             cy.visit('/login');
             cy.validLogin();
-            cy.checkMultipleItems();
+            cy.get('span.badge').should('contain', '4');
 
             cy.get('a[href="javascript:removeItem(1);"]').click();
             cy.get('a[href="javascript:removeItem(2);"]').click();

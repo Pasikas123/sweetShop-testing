@@ -52,33 +52,108 @@ describe('Basket page testing', () => {
 
     describe('Navigation links', () => {
         it("Navigation 'Sweet Shop' brings back to main page", () => {
-            cy.navShop();
+
+            cy.contains('a', 'Sweet Shop').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/');
+            cy.contains('h1', 'Welcome to the sweet shop!').should('be.visible');
         });
 
         it("Navigation 'Sweets' brings to 'Sweets' page", () => {
-            cy.navSweets();
+
+            cy.contains('a', 'Sweets').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/sweets');
+            cy.contains('h1', 'Browse sweets').should('be.visible');
         });
 
         it("Navigation 'About' brings to 'About' page", () => {
-            cy.navAbout();
+
+            cy.contains('a', 'About').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/about');
+            cy.contains('p', 'An intentionally broken web application to help demonstrate Chrome DevTools.').should('be.visible');
         });
 
         it("Navigation 'Login' brings to 'Login' page", () => {
-            cy.navLogin();
-        });
 
+            cy.contains('a', 'Login').click();
+            cy.url().should('eq', 'https://sweetshop.netlify.app/login');
+            cy.contains('h1', 'Login').should('be.visible');
+        });
+    });
+
+    describe('Add to basket functionality', () => {
+        it("Add single item to basket", () => {
+            cy.visit('/sweets');
+
+            cy.addWhamBars();
+            cy.contains('a', 'Basket').click();
+
+            cy.get('#basketItems')
+                .should('contain', 'Wham Bar')
+                .and('contain', 'x 1')
+                .and('contain', '£0.15')
+
+            cy.get('#basketCount').should('contain', '1');
+            cy.get('.list-group-item strong').should('contain', '£0.15');
+        });
+        it("Add two same items to basket", () => {
+            cy.visit('/sweets');
+
+            cy.addTwoSameItems();
+            cy.contains('a', 'Basket').click();
+
+            cy.get('#basketItems')
+                .should('contain', 'Sherbert Straws')
+                .and('contain', 'x 2')
+                .and('contain', '£1.50')
+
+            cy.get('#basketCount').should('contain', '2');
+            cy.get('.list-group-item strong').should('contain', '£1.50');
+        });
+        it("Add multiple items to basket", () => {
+            cy.visit('/sweets');
+
+            cy.addMultipleItems();
+            cy.contains('a', 'Basket').click();
+
+            cy.get('#basketItems')
+                .should('contain', 'Sherbert Straws')
+                .and('contain', 'x 1')
+                .and('contain', '£0.75')
+
+            cy.get('#basketItems')
+                .should('contain', 'Sherbet Discs')
+                .and('contain', 'x 1')
+                .and('contain', '£0.95')
+
+            cy.get('#basketItems')
+                .should('contain', 'Strawberry Bon Bons')
+                .and('contain', 'x 1')
+                .and('contain', '£1.00')
+
+            cy.get('#basketItems')
+                .should('contain', 'Chocolate Cups')
+                .and('contain', 'x 1')
+                .and('contain', '£1.00')
+
+            cy.get('#basketCount').should('contain', '4');
+            cy.get('.list-group-item strong').should('contain', '£3.70');
+        });
     });
 
     describe('Basket deleting functionality', () => {
         it("Delete single item from 1 total item", () => {
+            cy.visit('/sweets');
             cy.addWhamBars();
+            cy.contains('a', 'Basket').click();
             cy.contains('a.small', 'Delete Item').click();
 
             cy.get('#basketCount').should('contain', '0');
             cy.get('.list-group-item strong').should('contain', '£0.00');
         });
         it("Delete single item from 4 total items", () => {
+            cy.visit('/sweets');
             cy.addMultipleItems();
+            cy.contains('a', 'Basket').click();
 
             cy.get('a[href="javascript:removeItem(3);"]').click();
 
@@ -86,7 +161,9 @@ describe('Basket page testing', () => {
             cy.get('.list-group-item strong').should('contain', '£2.75');
         });
         it("Delete two items from 4 total items", () => {
+            cy.visit('/sweets');
             cy.addMultipleItems();
+            cy.contains('a', 'Basket').click();
 
             cy.get('a[href="javascript:removeItem(3);"]').click();
             cy.get('a[href="javascript:removeItem(4);"]').click();
@@ -98,7 +175,9 @@ describe('Basket page testing', () => {
 
     describe('Delivery functionality', () => {
         it("Choose Collect (FREE) with items in cart", () => {
+            cy.visit('/sweets');
             cy.addTwoDifferentItems();
+            cy.contains('a', 'Basket').click();
 
             cy.get('label[for="exampleRadios1"]').click();
             cy.get('.list-group-item strong').should('contain', '£2.00');
@@ -110,19 +189,22 @@ describe('Basket page testing', () => {
         });
 
         it("Choose Standard Shipping (£1.99) with different items in cart", () => {
+            cy.visit('/sweets');
             cy.addTwoDifferentItems();
+            cy.contains('a', 'Basket').click();
 
             cy.get('label[for="exampleRadios2"]').click();
             cy.get('.list-group-item strong').should('contain', '£3.99');
         });
 
         it("Choose Standard Shipping (£1.99) with same items in cart", () => {
+            cy.visit('/sweets');
             cy.addTwoSameItems();
+            cy.contains('a', 'Basket').click();
 
             cy.get('label[for="exampleRadios2"]').click();
             cy.get('.list-group-item strong').should('contain', '£3.49');
         });
-
 
         it("Choose Standard Shipping (£1.99) without items in cart", () => {
             cy.get('label[for="exampleRadios2"]').click();
@@ -132,7 +214,9 @@ describe('Basket page testing', () => {
 
     describe('Promo code functionality', () => {
         it("Promo code empty", () => {
+            cy.visit('/sweets');
             cy.addTwoDifferentItems();
+            cy.contains('a', 'Basket').click();
 
             cy.get('button.btn.btn-secondary').click();
 
@@ -140,7 +224,9 @@ describe('Basket page testing', () => {
         });
 
         it("Promo code entering", () => {
+            cy.visit('/sweets');
             cy.addTwoDifferentItems();
+            cy.contains('a', 'Basket').click();
 
             cy.get('input[placeholder="Promo code"]').type('test');
             cy.get('button.btn.btn-secondary').click();
@@ -151,7 +237,9 @@ describe('Basket page testing', () => {
 
     describe('Empty basket functionality', () => {
         it("Empty basket with items in basket", () => {
+            cy.visit('/');
             cy.addTwoDifferentItems();
+            cy.contains('a', 'Basket').click();
 
             cy.contains('a[href="#"]', 'Empty Basket').click();
             cy.get('#basketCount').should('contain', '0');
@@ -176,39 +264,84 @@ describe('Basket page testing', () => {
         });
 
         it("Make an order with valid data (with items in basket)", () => {
+            cy.visit('/');
             cy.addTwoDifferentItems();
-
+            cy.contains('a', 'Basket').click();
             cy.validBillingInfo();
 
-            cy.url().should('not.equal', 'https://sweetshop.netlify.app/basket?')
+            cy.url().should('not.equal', 'https://sweetshop.netlify.app/basket?');
+            cy.contains('Thank you for your order').should('be.visible');
         });
 
         it("Make an order with no billing information", () => {
+            cy.visit('/');
             cy.addTwoDifferentItems();
+            cy.contains('a', 'Basket').click();
 
             cy.get('label[for="exampleRadios1"]').click();
             cy.contains('button.btn-primary', 'Continue to checkout').click();
 
             cy.url().should('eq', 'https://sweetshop.netlify.app/basket')
-            cy.invalidFeedback();
+
+            cy.contains('.invalid-feedback', 'Valid first name is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Valid last name is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please enter a valid email address for shipping updates').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please enter your shipping address').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please select a valid country').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please provide a valid state.').should('be.visible');
+            cy.contains('.invalid-feedback', 'Zip code required.').should('be.visible');
+            cy.contains('.invalid-feedback', 'Name on card is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Credit card number is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Expiration date required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Security code required').should('be.visible');
+
+            cy.contains('Thank you for your order').should('not.exist');
+
         });
 
         it("Make an order with every invalid data", () => {
+            cy.visit('/');
             cy.addTwoDifferentItems();
-
+            cy.contains('a', 'Basket').click();
             cy.invalidEveryBillingInfo();
 
             cy.url().should('eq', 'https://sweetshop.netlify.app/basket');
-            cy.invalidFeedback();
+
+            cy.contains('.invalid-feedback', 'Valid first name is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Valid last name is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please enter a valid email address for shipping updates').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please enter your shipping address').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please select a valid country').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please provide a valid state.').should('be.visible');
+            cy.contains('.invalid-feedback', 'Zip code required.').should('be.visible');
+            cy.contains('.invalid-feedback', 'Name on card is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Credit card number is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Expiration date required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Security code required').should('be.visible');
+
+            cy.contains('Thank you for your order').should('not.exist');
         });
 
         it("Make an order with split invalid data", () => {
+            cy.visit('/');
             cy.addTwoDifferentItems();
-
+            cy.contains('a', 'Basket').click();
             cy.invalidSplitBillingInfo();
 
-            cy.invalidFeedback();
             cy.url().should('eq', 'https://sweetshop.netlify.app/basket');
+            cy.contains('Thank you for your order').should('not.exist');
+
+            cy.contains('.invalid-feedback', 'Valid first name is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Valid last name is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please enter a valid email address for shipping updates').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please enter your shipping address').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please select a valid country').should('be.visible');
+            cy.contains('.invalid-feedback', 'Please provide a valid state.').should('be.visible');
+            cy.contains('.invalid-feedback', 'Zip code required.').should('be.visible');
+            cy.contains('.invalid-feedback', 'Name on card is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Credit card number is required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Expiration date required').should('be.visible');
+            cy.contains('.invalid-feedback', 'Security code required').should('be.visible');
         });
     });
 

@@ -31,7 +31,15 @@ describe('Main page testing', () => {
     });
 
     it("All list items have necessary HTML elements", () => {
-      cy.checkHtmlElements();
+      cy.get('.card').each($item => {
+        cy.wrap($item).find('img').should(($img) => {
+          expect($img[0].naturalWidth).to.be.greaterThan(0);
+        });
+        cy.wrap($item).find('h4').should('be.visible');
+        cy.wrap($item).find('p').should('be.visible');
+        cy.wrap($item).find('small').should('be.visible');
+        cy.wrap($item).find('.addItem').should('be.visible');
+      });
     });
 
     it("Page has the footer", () => {
@@ -39,52 +47,57 @@ describe('Main page testing', () => {
     });
   });
 
-  describe('Navigation links', () => {
+  describe('Navigation links', () => { // assertai turi buti cia, ne commands
     it("Navigation 'Sweets' brings to 'Sweets' page", () => {
-      cy.navSweets();
+      cy.contains('a', 'Sweets').click();
+      cy.url().should('eq', 'https://sweetshop.netlify.app/sweets');
+      cy.contains('h1', 'Browse sweets').should('be.visible');
     });
 
     it("Navigation 'About' brings to 'About' page", () => {
-      cy.navAbout();
+      cy.contains('a', 'About').click();
+      cy.url().should('eq', 'https://sweetshop.netlify.app/about');
+      cy.contains('p', 'An intentionally broken web application to help demonstrate Chrome DevTools.').should('be.visible');
     });
 
     it("Navigation 'Login' brings to 'Login' page", () => {
-      cy.navLogin();
+      cy.contains('a', 'Login').click();
+      cy.url().should('eq', 'https://sweetshop.netlify.app/login');
+      cy.contains('h1', 'Login').should('be.visible');
     });
 
     it("Navigation 'Basket' brings to 'Basket' page", () => {
-      cy.navBasket();
+      cy.contains('a', 'Basket').click();
+      cy.url().should('eq', 'https://sweetshop.netlify.app/basket');
+      cy.contains('h1', 'Your Basket').should('be.visible');
     });
+  });
 
-    it("Button Browse Sweets functionality", () => {
+  describe('Button Browse Sweets functionality', () => {
+    it("Pressing the button", () => { // atskirai patikrint
       cy.contains('a', 'Browse Sweets').click();
       cy.url('https://sweetshop.netlify.app/sweets');
       cy.contains('h1', 'Browse sweets').should('be.visible');
     });
   });
 
-  describe('Adding to basket', () => {
+  describe('Adding to basket', () => { // tik kad basket skaicius pasikeistu
     it("Add to basket single item", () => {
       cy.get('a[data-name="Sherbert Straws"]').click();
       cy.contains('a span', '1').should('be.visible');
-      cy.contains('a', 'Basket').click();
-
-
-      cy.get('#basketItems')
-        .should('contain', 'Sherbert Straws')
-        .and('contain', 'x 1')
-        .and('contain', '£0.75')
-
-      cy.get('.list-group-item strong').should('contain', '£0.75');
 
     });
 
     it("Add to basket two same items", () => {
       cy.addTwoSameItems();
+
+      cy.contains('a span', '2').should('be.visible');
     });
 
     it("Add to basket multiple items", () => {
       cy.addMultipleItems();
+
+      cy.contains('a span', '4').should('be.visible');
     });
   });
 });
