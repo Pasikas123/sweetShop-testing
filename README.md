@@ -50,7 +50,7 @@ To run this program you need any Windows or Linux OS, and Visual Studio Code pro
 
 ### Installing
 
-1. Clone this project into Visual Studio Code: https://github.com/Pasikas123/sweetShop-testing.git
+1. Clone this project into Visual Studio Code: https://github.com/ddailide/sweetShop-testing.git
 2. Open terminal within this project.
 3. Run in terminal: npm install.
 
@@ -73,7 +73,7 @@ npm run cy
 ## Authors
 
 Donatas Dailidė
-@Pasikas123
+@ddailide
 https://www.linkedin.com/in/donatasdailide/
 
 ## 🔧 Tools Used
