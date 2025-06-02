@@ -9,11 +9,7 @@ This project contains automated and manual tests for the demo e-commerce website
 * The goal of the project was to validate the website's core functionalities through Cypress-based end-to-end testing, along with clearly documented manual test cases. Various scenarios such as visibility, navigation, login, buttons and basket functionality were covered.
 
 ## 🔧 Tools Used
-- Cypress
-- JavaScript (ES6)
-- JIRA (for manual test management)
-- Git & GitHub
-- Visual Studio Code
+[!(https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
 
 ## 📂 Project Structure
 
