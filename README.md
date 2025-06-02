@@ -8,6 +8,13 @@ This project contains automated and manual tests for the demo e-commerce website
 ![image](https://github.com/user-attachments/assets/6616367f-5ada-43e8-bdc2-46c68d912b0f)
 * The goal of the project was to validate the website's core functionalities through Cypress-based end-to-end testing, along with clearly documented manual test cases. Various scenarios such as visibility, navigation, login, buttons and basket functionality were covered.
 
+## 🔧 Tools Used
+- Cypress
+- JavaScript (ES6)
+- JIRA (for manual test management)
+- Git & GitHub
+- Visual Studio Code
+
 ## 📂 Project Structure
 
 ```
@@ -75,26 +82,3 @@ npm run cy
 Donatas Dailidė
 @ddailide
 https://www.linkedin.com/in/donatasdailide/
-
-## 🔧 Tools Used
-- Cypress
-- JavaScript (ES6)
-- JIRA (for manual test management)
-- Git & GitHub
-- Visual Studio Code
-
-## Version History
-
-* 0.5
-    * Added README.md file
-* 0.4
-    * Edited all script files, testcases.md
-* 0.3
-    * Added scripts for basketPage
-* 0.2
-    * Added scripts for mainpage and loginpage
-    * Added yourAccountPage tests
-    * Added scripts for sweetsPage
-    * Added scripts for aboutPage
-* 0.1
-    * Initial Commit
