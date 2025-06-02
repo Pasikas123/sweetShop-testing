@@ -9,7 +9,32 @@ This project contains automated and manual tests for the demo e-commerce website
 * The goal of the project was to validate the website's core functionalities through Cypress-based end-to-end testing, along with clearly documented manual test cases. Various scenarios such as visibility, navigation, login, buttons and basket functionality were covered.
 
 ## 🔧 Tools Used
-[!(https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
+
+<p align="left">
+  <a href="https://www.cypress.io/" target="_blank" title="Cypress">
+    <img src="https://raw.githubusercontent.com/cypress-io/cypress/develop/assets/cypress-logo-light.png" alt="Cypress" height="40"/>
+  </a>
+  &nbsp;
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript ES6">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" height="40"/>
+  </a>
+  &nbsp;
+  <a href="https://www.atlassian.com/software/jira" target="_blank" title="JIRA">
+    <img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="JIRA" height="40"/>
+  </a>
+  &nbsp;
+  <a href="https://git-scm.com/" target="_blank" title="Git">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" height="40"/>
+  </a>
+  &nbsp;
+  <a href="https://github.com/" target="_blank" title="GitHub">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" height="40"/>
+  </a>
+  &nbsp;
+  <a href="https://code.visualstudio.com/" target="_blank" title="Visual Studio Code">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" height="40"/>
+  </a>
+</p>
 
 ## 📂 Project Structure
 
