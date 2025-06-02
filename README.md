@@ -57,13 +57,13 @@ To run this program you need any Windows or Linux OS, and Visual Studio Code pro
 ### Example of how it looks
 
 #### Test cases in TestCases.md
-[📄 Test Cases](./TestCases.md)
+Press to see all manual Test Cases: [📄 Test Cases](./TestCases.md)
 
 #### Test cases in Cypress
 ![image](https://github.com/user-attachments/assets/f2b68cf5-0d90-4a71-adf7-15cb94672f26)
 
 #### Jira test cases and bugs
-⚠️ Jira project is private. You can see screenshots of test cases and bugs in: [🐜 Jira Cases](./JiraCases.md).
+⚠️ Jira project is private. Press to see screenshots of test cases and bugs: [🐜 Jira Cases](./JiraCases.md).
 
 ### Installing
 
