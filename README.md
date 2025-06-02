@@ -40,63 +40,50 @@ This project contains automated and manual tests for the demo e-commerce website
 
 ```
 sweetShop-testing/
-├── cypress/
-│   ├── e2e/
-│   ├── support/
-├── TestCases.md
-├── README.md
-├── package.json
+├── cypress/ 📁
+│   ├── e2e/ 📁
+│   ├── support/ 📁
+├── TestCases.md 📃
+├── README.md 📃
+├── package.json 📃
 ```
+
+## Dependencies
+
+To run this program you need any Windows or Linux OS, and Visual Studio Code program with Node.js installed.
 
 ## Getting Started
 
 ### Example of how it looks
 
 #### Test cases in TestCases.md
-![image](https://github.com/user-attachments/assets/4dbcbdef-bdd5-4b30-bfee-b2c1ee3132ab)
-![image](https://github.com/user-attachments/assets/cd7086f2-a5a6-4c3e-8364-10194353ae57)
-![image](https://github.com/user-attachments/assets/a72d96d0-7f1b-40df-ad41-fc363f84b750)
+[📄 Test Cases](./TestCases.md)
 
 #### Test cases in Cypress
-![image](https://github.com/user-attachments/assets/30d9cd12-4912-4016-a57c-44dc0bdf68b6)
-![image](https://github.com/user-attachments/assets/6ea7e4a1-b256-4e29-bcda-bf6aa38965e6)
+![image](https://github.com/user-attachments/assets/f2b68cf5-0d90-4a71-adf7-15cb94672f26)
 
 #### Jira test cases and bugs
-⚠️ Jira project is private. Screenshots below show example test cases and bugs.
-##### Test cases
-![image](https://github.com/user-attachments/assets/225511ca-22c7-4f4f-9003-1478fbdb404c)
-![image](https://github.com/user-attachments/assets/74e00082-f25c-4d28-89dd-8fac8e9ce54b)
-![image](https://github.com/user-attachments/assets/5b22bd23-2c55-4315-a1e4-c0dd1403939b)
-![image](https://github.com/user-attachments/assets/8dccc449-5f81-4e8a-bae6-81ab3da683ea)
-![image](https://github.com/user-attachments/assets/6c34ff19-dcfe-48ea-aa92-c7e46e50102c)
-##### Bugs
-![image](https://github.com/user-attachments/assets/43a6ee66-1e9b-4be7-a858-1036eef9fa17)
-
-### Dependencies
-
-To run this program you need any Windows or Linux OS, and Visual Studio Code program with Node.js installed.
+⚠️ Jira project is private. You can see screenshots of test cases and bugs in: [🐜 Jira Cases](./JiraCases.md).
 
 ### Installing
 
-1. Clone this project into Visual Studio Code: https://github.com/ddailide/sweetShop-testing.git
-2. Open terminal within this project.
-3. Run in terminal: npm install.
-
+1. Open Visual Studio Code.
+2. Clone this project:
+   ```
+   git clone https://github.com/ddailide/sweetShop-testing.git
+   ```
+3. Run in terminal:
+   ```
+   npm install
+   ```
+   
 ## 🚀 Running the Tests
-
-### 📄 Manual test cases
-- Open `TestCases.md` file
 
 ### 🤖 Cypress tests
 1. Run in terminal:
-npm run cy
-2. In Cypress UI:
-- Select **E2E Testing**
-- Click **Start E2E Testing**
-- Choose any test file from the list
-![image](https://github.com/user-attachments/assets/f804635e-f3b7-4dd0-a569-8035068b48e9)
-![image](https://github.com/user-attachments/assets/651b221c-427d-4aad-b253-e093d987127b)
-![image](https://github.com/user-attachments/assets/0088a09c-f83b-4776-9072-0e3f7aca4eba)
+   ```
+   npm run cyr
+   ```
 
 ## Authors
 
