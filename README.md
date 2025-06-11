@@ -40,12 +40,33 @@ This project contains automated and manual tests for the demo e-commerce website
 
 ```
 sweetShop-testing/
+├── .github/ 📁
+│   └── workflows/ 📁
+│       └── node.js.yml 📃
 ├── cypress/ 📁
+│   ├── downloads/ 📁
 │   ├── e2e/ 📁
-│   ├── support/ 📁
-├── TestCases.md 📃
-├── README.md 📃
+│   │   ├── aboutPage.cy.js 📃
+│   │   ├── basketPage.cy.js 📃
+│   │   ├── loginPage.cy.js 📃
+│   │   ├── mainPage.cy.js 📃
+│   │   ├── sweetsPage.cy.js 📃
+│   │   └── yourAccountPage.cy.js 📃
+│   ├── fixtures/ 📁
+│   │   └── billing.json 📃
+│   ├── screenshots/ 📁
+│   └── support/ 📁
+│       ├── commands.js 📃
+│       └── e2e.js 📃
+├── images/ 📁
+├── node_modules/ 📁
+├── .gitignore 📃
+├── cypress.config.js 📃
+├── JiraCases.md 📃
 ├── package.json 📃
+├── package-lock.json 📃
+├── README.md 📃
+└── TestCases.md 📃
 ```
 
 ## Dependencies
