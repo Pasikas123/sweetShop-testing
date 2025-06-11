@@ -193,7 +193,7 @@ Actual result:
 
 STATUS: PASS.
 
-## TC.2.1.3 Login page has abbr in description
+## TC.2.1.3 Login page has hover in description
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Observe description
 
@@ -326,10 +326,6 @@ STATUS: PASS.
 
 Expected result: Should redirect to twitter website.
 
-Actual result: Nothing happens, staying at the same login page.
-
-STATUS: FAIL.
-
 ## TC.2.4.2 Facebook link does not redirect to facebook.com
 * 1. Enter https://sweetshop.netlify.app/login
 * 2. Press Facebook button under login button
@@ -337,9 +333,6 @@ STATUS: FAIL.
 
 Expected result: Should redirect to Facebook website.
 
-Actual result: Nothing happens, staying at the same login page.
-
-STATUS: FAIL.
 
 ## TC.2.4.3 Linkedin link does not redirect to linkedin.com
 * 1. Enter https://sweetshop.netlify.app/login
@@ -347,10 +340,6 @@ STATUS: FAIL.
 * 3. Observe Linkedin page
 
 Expected result: Should redirect to Linkedin website.
-
-Actual result: Nothing happens, staying at the same login page.
-
-STATUS: FAIL.
 
 
 # TS.3. Your account page

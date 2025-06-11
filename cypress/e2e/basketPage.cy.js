@@ -85,6 +85,7 @@ describe('Basket page testing', () => {
             cy.visit('/sweets');
 
             cy.addWhamBars();
+
             cy.contains('a', 'Basket').click();
 
             cy.get('#basketItems')
@@ -95,6 +96,7 @@ describe('Basket page testing', () => {
             cy.get('#basketCount').should('contain', '1');
             cy.get('.list-group-item strong').should('contain', '£0.15');
         });
+
         it("Add two same items to basket", () => {
             cy.visit('/sweets');
 
@@ -257,7 +259,10 @@ describe('Basket page testing', () => {
 
     describe('Making an order', () => {
         it("Make an order with valid data (no items in basket)", () => {
-            cy.validBillingInfo();
+
+            cy.fixture('billing').then(({ valid }) => {
+                cy.fillBillingInfo(valid);
+            });
 
             cy.url().should('eq', 'https://sweetshop.netlify.app/basket?')
             cy.contains('.invalid-feedback', 'Please add items to cart!').should('be.visible');
@@ -267,7 +272,10 @@ describe('Basket page testing', () => {
             cy.visit('/');
             cy.addTwoDifferentItems();
             cy.contains('a', 'Basket').click();
-            cy.validBillingInfo();
+
+            cy.fixture('billing').then(({ valid }) => {
+                cy.fillBillingInfo(valid);
+            });
 
             cy.url().should('not.equal', 'https://sweetshop.netlify.app/basket?');
             cy.contains('Thank you for your order').should('be.visible');
@@ -299,11 +307,14 @@ describe('Basket page testing', () => {
 
         });
 
-        it("Make an order with every invalid data", () => {
+        it("Make an order with full invalid data", () => {
             cy.visit('/');
             cy.addTwoDifferentItems();
             cy.contains('a', 'Basket').click();
-            cy.invalidEveryBillingInfo();
+
+            cy.fixture('billing').then(({ fullInvalid }) => {
+                cy.fillBillingInfo(fullInvalid);
+            });
 
             cy.url().should('eq', 'https://sweetshop.netlify.app/basket');
 
@@ -322,11 +333,14 @@ describe('Basket page testing', () => {
             cy.contains('Thank you for your order').should('not.exist');
         });
 
-        it("Make an order with split invalid data", () => {
+        it("Make an order with half invalid data", () => {
             cy.visit('/');
             cy.addTwoDifferentItems();
             cy.contains('a', 'Basket').click();
-            cy.invalidSplitBillingInfo();
+
+            cy.fixture('billing').then(({ halfInvalid }) => {
+                cy.fillBillingInfo(halfInvalid);
+            });
 
             cy.url().should('eq', 'https://sweetshop.netlify.app/basket');
             cy.contains('Thank you for your order').should('not.exist');

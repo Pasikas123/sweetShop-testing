@@ -24,55 +24,30 @@ Cypress.Commands.add('validLogin', () => {
     cy.contains('button', 'Login').click();
 });
 
-Cypress.Commands.add('validBillingInfo', () => {
-    cy.get('input.form-control').eq(1).type('Test');
-    cy.get('input.form-control').eq(2).type('Test');
-    cy.get('#email').type('tester@gmail.com');
-    cy.get('#address').type('Test str. 22-2');
-    cy.get('#country').select('United Kingdom');
-    cy.get('#city').select('Bristol');
-    cy.get('#zip').type('123123');
-    cy.get('#cc-name').type('Tester Tester');
-    cy.get('#cc-number').type('123123123123123');
-    cy.get('#cc-expiration').type('08/28');
-    cy.get('#cc-cvv').type('123');
+Cypress.Commands.add('fillBillingInfo', (data) => {
+
+    const inputs = [
+        data.firstName,
+        data.lastName
+    ];
+
+    inputs.forEach((value, i) => {
+        cy.get('input.form-control').eq(i + 1)
+        .clear()
+        .type(value);
+    });
+    
+    cy.get('#email').type(data.email);
+    cy.get('#address').type(data.address);
+    cy.get('#country').select(data.country);
+    cy.get('#city').select(data.city);
+    cy.get('#zip').type(data.zip);
+    cy.get('#cc-name').type(data.ccName);
+    cy.get('#cc-number').type(data.ccNumber);
+    cy.get('#cc-expiration').type(data.ccExp);
+    cy.get('#cc-cvv').type(data.ccCvv);
 
     cy.get('label[for="exampleRadios1"]').click();
     cy.contains('button.btn-primary', 'Continue to checkout').click();
 });
-
-Cypress.Commands.add('invalidEveryBillingInfo', () => {
-    cy.get('input.form-control').eq(1).type('123123');
-    cy.get('input.form-control').eq(2).type('123123');
-    cy.get('#email').type('123123');
-    cy.get('#address').type('123123');
-    cy.get('#country').select('United Kingdom');
-    cy.get('#city').select('Bristol');
-    cy.get('#zip').type('test');
-    cy.get('#cc-name').type('123123123123');
-    cy.get('#cc-number').type('test');
-    cy.get('#cc-expiration').type('test');
-    cy.get('#cc-cvv').type('e');
-
-    cy.get('label[for="exampleRadios1"]').click();
-    cy.contains('button.btn-primary', 'Continue to checkout').click();
-});
-
-Cypress.Commands.add('invalidSplitBillingInfo', () => {
-    cy.get('input.form-control').eq(1).type('123123');
-    cy.get('input.form-control').eq(2).type('123123');
-    cy.get('#email').type('123123@gmail.com');
-    cy.get('#address').type('123123');
-    cy.get('#country').select('United Kingdom');
-    cy.get('#city').select('Bristol');
-    cy.get('#zip').type('test');
-    cy.get('#cc-name').type('123123123123');
-    cy.get('#cc-number').type('test');
-    cy.get('#cc-expiration').type('test');
-    cy.get('#cc-cvv').type('123');
-
-    cy.get('label[for="exampleRadios1"]').click();
-    cy.contains('button.btn-primary', 'Continue to checkout').click();
-});
-
 

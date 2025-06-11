@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cyo": "npx cypress open",
-    "cyr": "npx cypress run"
+    "cyr": "npx cypress run --browser chrome"
   },
   "keywords": [],
   "author": "",

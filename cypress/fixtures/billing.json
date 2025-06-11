@@ -1,0 +1,41 @@
+{
+  "valid": {
+    "firstName": "Test",
+    "lastName": "Test",
+    "email": "tester@gmail.com",
+    "address": "Test str. 22-2",
+    "country": "United Kingdom",
+    "city": "Bristol",
+    "zip": "123123",
+    "ccName": "Tester Tester",
+    "ccNumber": "123123123123123",
+    "ccExp": "08/28",
+    "ccCvv": "123"
+  },
+  "fullInvalid": {
+    "firstName": "123123",
+    "lastName": "123123",
+    "email": "123123",
+    "address": "123123",
+    "country": "United Kingdom",
+    "city": "Bristol",
+    "zip": "test",
+    "ccName": "123123123123",
+    "ccNumber": "test",
+    "ccExp": "test",
+    "ccCvv": "e"
+  },
+    "halfInvalid": {
+    "firstName": "123123",
+    "lastName": "123123",
+    "email": "123123@gmail.com",
+    "address": "123123",
+    "country": "United Kingdom",
+    "city": "Bristol",
+    "zip": "test",
+    "ccName": "123123123123",
+    "ccNumber": "test",
+    "ccExp": "test",
+    "ccCvv": "123"
+  }
+}
