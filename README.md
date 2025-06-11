@@ -44,7 +44,6 @@ sweetShop-testing/
 │   └── workflows/ 📁
 │       └── node.js.yml 📃
 ├── cypress/ 📁
-│   ├── downloads/ 📁
 │   ├── e2e/ 📁
 │   │   ├── aboutPage.cy.js 📃
 │   │   ├── basketPage.cy.js 📃
@@ -54,7 +53,6 @@ sweetShop-testing/
 │   │   └── yourAccountPage.cy.js 📃
 │   ├── fixtures/ 📁
 │   │   └── billing.json 📃
-│   ├── screenshots/ 📁
 │   └── support/ 📁
 │       ├── commands.js 📃
 │       └── e2e.js 📃
